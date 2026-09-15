@@ -1,0 +1,20 @@
+export const person = {
+  "id": "davide",
+  "name": "Davide Greco",
+  "initials": "DG",
+  "mappingId": "talent",
+  "role": "Talent Acquisition Partner",
+  "unit": "People & Culture",
+  "project": "Talent Acquisition — Q2 2026 baseline",
+  "status": "Awaiting responses",
+  "completed": "—",
+  "coverage": null,
+  "avgLevel": null,
+  "onTarget": "—",
+  "criticalGaps": null,
+  "severity": "—",
+  "raters": "2 of 5 responses in",
+  "note": "Invited 14 Apr · reminder sent",
+  "strengths": [],
+  "gaps": []
+};
