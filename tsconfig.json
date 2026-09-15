@@ -1,0 +1,34 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"lib": ["esnext", "DOM", "DOM.Iterable"],
+		"moduleResolution": "bundler",
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"strict": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": true,
+		"rewriteRelativeImportExtensions": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"paths": {
+			"$lib": ["./src/lib"],
+			"$lib/*": ["./src/lib/*"],
+			"@pack/ui/lib/*": ["./src/lib/*"]
+		}
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.svelte",
+		"src/**/*.d.ts",
+		"vite.config.ts",
+		".storybook/**/*.ts",
+		"sst-env.d.ts"
+	],
+	"exclude": ["node_modules", "dist", "storybook-static"]
+}

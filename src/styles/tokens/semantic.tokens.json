@@ -1,0 +1,212 @@
+{
+	"color": {
+		"background": {
+			"$value": "{color.gray.1}",
+			"$type": "color"
+		},
+		"foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"card": {
+			"$value": "{color.gray.1}",
+			"$type": "color"
+		},
+		"card-foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"popover": {
+			"$value": "{color.gray.1}",
+			"$type": "color"
+		},
+		"popover-foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"muted": {
+			"$value": "{color.gray.2}",
+			"$type": "color"
+		},
+		"muted-foreground": {
+			"$value": "{color.gray.11}",
+			"$type": "color"
+		},
+		"accent": {
+			"$value": "{color.primary.50}",
+			"$type": "color"
+		},
+		"accent-foreground": {
+			"$value": "{color.primary.800}",
+			"$type": "color"
+		},
+		"accent-hover": {
+			"$value": "{color.primary.100}",
+			"$type": "color"
+		},
+		"accent-active": {
+			"$value": "{color.primary.200}",
+			"$type": "color"
+		},
+		"accent-disabled": {
+			"$value": "{color.primary.50}",
+			"$type": "color"
+		},
+		"primary": {
+			"$value": "{color.primary.500}",
+			"$type": "color"
+		},
+		"primary-foreground": {
+			"$value": "{color.white.solid}",
+			"$type": "color"
+		},
+		"primary-hover": {
+			"$value": "{color.primary.600}",
+			"$type": "color"
+		},
+		"primary-active": {
+			"$value": "{color.primary.700}",
+			"$type": "color"
+		},
+		"primary-disabled": {
+			"$value": "{color.primary.50}",
+			"$type": "color"
+		},
+		"secondary": {
+			"$value": "{color.gray.3}",
+			"$type": "color"
+		},
+		"secondary-foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"secondary-hover": {
+			"$value": "{color.gray.4}",
+			"$type": "color"
+		},
+		"secondary-active": {
+			"$value": "{color.gray.5}",
+			"$type": "color"
+		},
+		"secondary-disabled": {
+			"$value": "{color.gray.2}",
+			"$type": "color"
+		},
+		"destructive": {
+			"$value": "{color.error.400}",
+			"$type": "color"
+		},
+		"destructive-foreground": {
+			"$value": "{color.gray.1}",
+			"$type": "color"
+		},
+		"destructive-hover": {
+			"$value": "{color.error.500}",
+			"$type": "color"
+		},
+		"destructive-active": {
+			"$value": "{color.error.500}",
+			"$type": "color"
+		},
+		"destructive-disabled": {
+			"$value": "{color.error.50}",
+			"$type": "color"
+		},
+		"success": {
+			"$value": "{color.success.300}",
+			"$type": "color"
+		},
+		"success-foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"success-hover": {
+			"$value": "{color.success.400}",
+			"$type": "color"
+		},
+		"success-active": {
+			"$value": "{color.success.500}",
+			"$type": "color"
+		},
+		"success-disabled": {
+			"$value": "{color.success.50}",
+			"$type": "color"
+		},
+		"warning": {
+			"$value": "{color.warning.300}",
+			"$type": "color"
+		},
+		"warning-foreground": {
+			"$value": "{color.gray.12}",
+			"$type": "color"
+		},
+		"warning-hover": {
+			"$value": "{color.warning.400}",
+			"$type": "color"
+		},
+		"warning-active": {
+			"$value": "{color.warning.500}",
+			"$type": "color"
+		},
+		"warning-disabled": {
+			"$value": "{color.warning.50}",
+			"$type": "color"
+		},
+		"info": {
+			"$value": "{color.info.300}",
+			"$type": "color"
+		},
+		"info-foreground": {
+			"$value": "{color.gray.1}",
+			"$type": "color"
+		},
+		"info-hover": {
+			"$value": "{color.info.400}",
+			"$type": "color"
+		},
+		"info-active": {
+			"$value": "{color.info.500}",
+			"$type": "color"
+		},
+		"info-disabled": {
+			"$value": "{color.info.50}",
+			"$type": "color"
+		},
+		"border": {
+			"$value": "{color.gray.4}",
+			"$type": "color"
+		},
+		"input": {
+			"$value": "{color.gray.4}",
+			"$type": "color"
+		},
+		"ring": {
+			"$value": "{color.primary.500}",
+			"$type": "color"
+		},
+		"chart-1": {
+			"$value": "{color.primary.500}",
+			"$type": "color"
+		},
+		"chart-2": {
+			"$value": "{color.info.300}",
+			"$type": "color"
+		},
+		"chart-3": {
+			"$value": "{color.success.300}",
+			"$type": "color"
+		},
+		"chart-4": {
+			"$value": "{color.warning.300}",
+			"$type": "color"
+		},
+		"chart-5": {
+			"$value": "{color.error.300}",
+			"$type": "color"
+		}
+	},
+	"radius": {
+		"$value": "{radius.base}",
+		"$type": "dimension"
+	}
+}

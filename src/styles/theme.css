@@ -1,0 +1,212 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn-svelte/tailwind.css';
+@import './globals.css';
+
+@plugin '@tailwindcss/typography';
+@plugin '@tailwindcss/forms';
+@plugin 'flowbite/plugin';
+
+/*
+ * Class-based dark variant only. No .dark token block.
+ * This keeps `dark:` from following prefers-color-scheme.
+ */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Sidebar has no mapping in globals.css. Light values only.
+ * Semantic colours, radius, charts, and fonts come from globals.css.
+ * Ramps below keep bg-primary-600 / bg-warning-300 working.
+ */
+:root {
+	--sidebar: #ffffff;
+	--sidebar-foreground: #3b3b3b;
+	--sidebar-primary: #ff5d18;
+	--sidebar-primary-foreground: #ffffff;
+	--sidebar-accent: #ffefe8;
+	--sidebar-accent-foreground: #b54211;
+	--sidebar-border: #e0e0e0;
+	--sidebar-ring: #ff5d18;
+}
+
+@theme {
+	/* primary — Figma light_mode.tokens.json */
+	--color-primary-50: #ffefe8;
+	--color-primary-100: #ffcdb7;
+	--color-primary-200: #ffb495;
+	--color-primary-300: #ff9264;
+	--color-primary-400: #ff7d46;
+	--color-primary-500: #ff5d18;
+	--color-primary-600: #e85516;
+	--color-primary-700: #b54211;
+	--color-primary-800: #8c330d;
+	--color-primary-900: #6b270a;
+
+	/* gray 1–12 */
+	--color-gray-1: #fcfcfc;
+	--color-gray-2: #f9f9f9;
+	--color-gray-3: #f0f0f0;
+	--color-gray-4: #e8e8e8;
+	--color-gray-5: #e0e0e0;
+	--color-gray-6: #d9d9d9;
+	--color-gray-7: #cecece;
+	--color-gray-8: #bbbbbb;
+	--color-gray-9: #8d8d8d;
+	--color-gray-10: #838383;
+	--color-gray-11: #646464;
+	--color-gray-12: #3b3b3b;
+
+	/* black / white overlays */
+	--color-black-1: #0000000c;
+	--color-black-2: #00000019;
+	--color-black-3: #00000026;
+	--color-black-4: #00000033;
+	--color-black-5: #0000004c;
+	--color-black-6: #00000066;
+	--color-black-7: #0000007f;
+	--color-black-8: #00000099;
+	--color-black-9: #000000b2;
+	--color-black-10: #000000cc;
+	--color-black-11: #000000e5;
+	--color-black-12: #000000f2;
+
+	--color-white-1: #ffffff0c;
+	--color-white-2: #ffffff19;
+	--color-white-3: #ffffff26;
+	--color-white-4: #ffffff33;
+	--color-white-5: #ffffff4c;
+	--color-white-6: #ffffff66;
+	--color-white-7: #ffffff7f;
+	--color-white-8: #ffffff99;
+	--color-white-9: #ffffffb2;
+	--color-white-10: #ffffffcc;
+	--color-white-11: #ffffffe5;
+	--color-white-12: #fffffff2;
+
+	/* semantic success / warning / error / info */
+	--color-success-50: #e6f8e9;
+	--color-success-75: #96e4a6;
+	--color-success-100: #6bd981;
+	--color-success-200: #2bc84b;
+	--color-success-300: #00bd26;
+	--color-success-400: #00841b;
+	--color-success-500: #007317;
+
+	--color-warning-50: #fff5d9;
+	--color-warning-75: #f6e09a;
+	--color-warning-100: #f3d370;
+	--color-warning-200: #eec032;
+	--color-warning-300: #eab308;
+	--color-warning-400: #a47d06;
+	--color-warning-500: #8f6d05;
+
+	--color-error-50: #ffe7e7;
+	--color-error-75: #ffa7a7;
+	--color-error-100: #ff8383;
+	--color-error-200: #ff4d4d;
+	--color-error-300: #ff2929;
+	--color-error-400: #b31d1d;
+	--color-error-500: #9c1919;
+
+	--color-info-50: #e7f0fe;
+	--color-info-75: #9dc1fa;
+	--color-info-100: #74a7f9;
+	--color-info-200: #3982f6;
+	--color-info-300: #1068f4;
+	--color-info-400: #0b49ab;
+	--color-info-500: #0a3f95;
+
+	/* Legacy mentoring / assessments palettes */
+	--color-secondary-100: #edf7ed;
+	--color-secondary-200: #daeffb;
+	--color-secondary-300: #c8e7f9;
+	--color-secondary-400: #b6dff7;
+	--color-secondary-500: #a4d7f5;
+	--color-secondary-600: #91cff3;
+	--color-secondary-700: #7ec7f1;
+	--color-secondary-800: #7ec7f1;
+	--color-secondary-900: #5ab7ed;
+
+	--color-tertiary-100: #0aadff;
+	--color-tertiary-200: #00a3f5;
+	--color-tertiary-300: #007ab8;
+	--color-tertiary-400: #0088cc;
+	--color-tertiary-500: #0074af;
+	--color-tertiary-600: #91cff3;
+	--color-tertiary-700: #7ec7f1;
+	--color-tertiary-800: #7ec7f1;
+	--color-tertiary-900: #004466;
+
+	--color-neutralB: #101410;
+	--color-neutralW: #f9fafc;
+
+	--color-myGray-100: #eeeef0;
+	--color-myGray-200: #c9c8ca;
+	--color-myGray-300: #a7a5a8;
+	--color-myGray-400: #878588;
+	--color-myGray-500: #6a696c;
+	--color-myGray-600: #504f52;
+	--color-myGray-700: #38393c;
+	--color-myGray-800: #ff680a;
+	--color-myGray-900: #101314;
+
+	--color-positive-100: #dfffc2;
+	--color-positive-200: #d5ffad;
+	--color-positive-300: #caff99;
+	--color-positive-400: #c0ff85;
+	--color-positive-500: #b5ff70;
+	--color-positive-600: #76f500;
+	--color-positive-700: #6ce000;
+	--color-positive-800: #63cc00;
+	--color-positive-900: #59b800;
+
+	--color-negative-100: #ff9e99;
+	--color-negative-200: #ff8b85;
+	--color-negative-300: #ff7770;
+	--color-negative-400: #ff645c;
+	--color-negative-500: #ff4e45;
+	--color-negative-600: #ff3d33;
+	--color-negative-700: #ff2a1f;
+	--color-negative-800: #ff160a;
+	--color-negative-900: #f50c00;
+}
+
+@theme inline {
+	--default-ring-width: 3px;
+	--default-ring-color: var(--primary);
+
+	--color-sidebar-ring: var(--sidebar-ring);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar: var(--sidebar);
+}
+
+/* Scans @pack/ui component sources for all consumers importing this file. */
+@source '../**/*.{html,js,svelte,ts}';
+
+/*
+  Legacy base styles (previously in web/assessments app.css + tailwind.config).
+  Inter is loaded by each app as before (e.g. Google Fonts in assessments app.html).
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: rgb(var(--color-gray-200, 229 231 235));
+	}
+
+	html,
+	body {
+		@apply text-gray-900;
+	}
+
+	img {
+		@apply inline-block; /* for pdf generation */
+	}
+}
