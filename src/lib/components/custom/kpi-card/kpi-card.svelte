@@ -19,6 +19,7 @@
 	const washClass: Record<UniversalChipColor, string> = {
 		gray: 'bg-gray-3',
 		primary: 'bg-primary-50',
+		orange: 'bg-primary-100',
 		success: 'bg-success-50',
 		warning: 'bg-warning-50',
 		error: 'bg-error-50',
@@ -28,6 +29,7 @@
 	const titleClass: Record<UniversalChipColor, string> = {
 		gray: 'text-gray-11',
 		primary: 'text-primary-100',
+		orange: 'text-primary-500',
 		success: 'text-success-100',
 		warning: 'text-warning-100',
 		error: 'text-error-100',

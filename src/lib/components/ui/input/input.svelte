@@ -1,18 +1,38 @@
+<script lang="ts" module>
+	export const INPUT_TYPES = [
+		'text',
+		'email',
+		'password',
+		'number',
+		'search',
+		'tel',
+		'url',
+		'date',
+		'datetime-local',
+		'time',
+		'month',
+		'week',
+		'color',
+		'file',
+		'hidden'
+	] as const;
+
+	export type InputType = (typeof INPUT_TYPES)[number];
+</script>
+
 <script lang="ts">
 	import { cn, type WithElementRef } from '@pack/ui/lib/utils.js';
-	import type { HTMLInputAttributes, HTMLInputTypeAttribute } from 'svelte/elements';
-
-	type InputType = Exclude<HTMLInputTypeAttribute, 'file'>;
+	import type { HTMLInputAttributes } from 'svelte/elements';
 
 	type Props = WithElementRef<
 		Omit<HTMLInputAttributes, 'type'> &
-			({ type: 'file'; files?: FileList } | { type?: InputType; files?: undefined })
+			({ type: 'file'; files?: FileList } | { type?: Exclude<InputType, 'file'>; files?: undefined })
 	>;
 
 	let {
 		ref = $bindable(null),
 		value = $bindable(),
-		type,
+		type = 'text',
 		files = $bindable(),
 		class: className,
 		'data-slot': dataSlot = 'input',

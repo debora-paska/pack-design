@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { CheckOutline } from 'flowbite-svelte-icons';
-	import SkillStatusChip from '../skill-status-chip/skill-status-chip.svelte';
-	import type { ImportedSkillItem } from '../types';
+	import UniversalChip from '../universal-chip/universal-chip.svelte';
+	import { SKILL_STATUS_META } from '../skill-status-chip/skill-status-chip.svelte';
+	import type { ImportedSkillItem, SkillStatus, UniversalChipColor } from '../types';
 
 	let {
 		count,
@@ -16,6 +17,14 @@
 		skills: ImportedSkillItem[];
 		isOpen?: boolean;
 	} = $props();
+
+	const statusColor: Record<SkillStatus, UniversalChipColor> = {
+		growing: 'success',
+		stable: 'gray',
+		embedded: 'info',
+		new: 'primary',
+		declining: 'error'
+	};
 
 	function handleToggle() {
 		isOpen = !isOpen;
@@ -50,7 +59,9 @@
 			{#each skills as skill (skill.name)}
 				<div class="flex items-center justify-between rounded-md bg-gray-2 px-2.5 py-2">
 					<span class="text-[13px] text-foreground">{skill.name}</span>
-					<SkillStatusChip status={skill.status} />
+					<UniversalChip color={statusColor[skill.status]}>
+						{SKILL_STATUS_META[skill.status].label}
+					</UniversalChip>
 				</div>
 			{/each}
 		</div>

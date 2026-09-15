@@ -3,7 +3,7 @@
 	import UniversalTab from './universal-tab.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/UniversalTab',
+		title: 'custom/Atomic/UniversalTab',
 		component: UniversalTab,
 		tags: ['autodocs'],
 		args: {

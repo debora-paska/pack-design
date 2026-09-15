@@ -3,7 +3,7 @@
 	import UniversalTabsExample from './universal-tabs.example.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/UniversalTabs',
+		title: 'custom/Atomic/UniversalTabs',
 		component: UniversalTabsExample,
 		tags: ['autodocs'],
 		args: {

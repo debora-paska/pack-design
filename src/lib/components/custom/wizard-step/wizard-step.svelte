@@ -23,7 +23,7 @@
 	<div
 		class={cn(
 			'flex size-9 shrink-0 items-center justify-center rounded-full border-2 text-[13px] font-semibold',
-			isDone && 'border-primary-500 bg-primary-500 text-white',
+			isDone && 'border-success-100 bg-success-100 text-white',
 			isActive && 'border-primary-500 bg-transparent text-primary-500',
 			state === 'idle' && 'border-gray-6 bg-transparent text-muted-foreground'
 		)}

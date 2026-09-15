@@ -16,6 +16,29 @@ const preview: Preview = {
 				color: /(background|color)$/i,
 				date: /Date$/i
 			}
+		},
+		options: {
+			storySort: {
+				order: [
+					'*',
+					'custom',
+					[
+						'*',
+						'Atomic',
+						[
+							'Chip',
+							'ChipGroup',
+							'InternalTab',
+							'InternalTabs',
+							'UniversalChip',
+							'UniversalTab',
+							'UniversalTabs'
+						],
+						'Assessment',
+						['WizardStep', 'AssessmentTypeOption', 'ImportedSkillsPanel', 'AriaNotice']
+					]
+				]
+			}
 		}
 	}
 };

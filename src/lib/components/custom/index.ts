@@ -18,8 +18,6 @@ export { default as CoverageBar } from './coverage-bar/coverage-bar.svelte';
 export { default as CoverageCard } from './coverage-card/coverage-card.svelte';
 export { default as UniversalChip } from './universal-chip/universal-chip.svelte';
 export { universalChipVariants } from './universal-chip/universal-chip.svelte';
-export { default as MappingTypeChip } from './mapping-type-chip/mapping-type-chip.svelte';
-export { default as MappingStatusChip } from './mapping-status-chip/mapping-status-chip.svelte';
 export { default as MappingCard } from './mapping-card/mapping-card.svelte';
 export { default as InternalTab } from './internal-tab/internal-tab.svelte';
 export { default as InternalTabs } from './internal-tabs/internal-tabs.svelte';
@@ -40,13 +38,12 @@ export { default as AriaSummaryCard } from './aria-summary-card/aria-summary-car
 export { default as LevelScaleTile } from './level-scale-tile/level-scale-tile.svelte';
 export { default as HeadlineCard } from './headline-card/headline-card.svelte';
 export { default as WizardStep } from './wizard-step/wizard-step.svelte';
-export { default as WizardStepper } from './wizard-stepper/wizard-stepper.svelte';
-export { default as FieldRow } from './field-row/field-row.svelte';
+export { default as Chip } from './chip/chip.svelte';
+export { chipVariants } from './chip/chip.svelte';
 export { default as ChipGroup } from './chip-group/chip-group.svelte';
 export { default as AssessmentTypeOption } from './assessment-type-option/assessment-type-option.svelte';
 export { default as ImportedSkillsPanel } from './imported-skills-panel/imported-skills-panel.svelte';
 export { default as AriaNotice } from './aria-notice/aria-notice.svelte';
-export { default as WizardFormCard } from './wizard-form-card/wizard-form-card.svelte';
 
 export type {
 	SkillStatus,
@@ -70,7 +67,6 @@ export type {
 	KeyValueRow,
 	SkillConfidence,
 	WizardStepState,
-	WizardStepItem,
 	ChipGroupOption,
 	AssessmentTypeChoice,
 	ImportedSkillItem

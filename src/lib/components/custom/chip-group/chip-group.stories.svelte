@@ -3,7 +3,7 @@
 	import ChipGroup from './chip-group.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/Assessment/ChipGroup',
+		title: 'custom/Atomic/ChipGroup',
 		component: ChipGroup,
 		tags: ['autodocs'],
 		args: {

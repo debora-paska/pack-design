@@ -3,7 +3,7 @@
 	import InternalTabsExample from './internal-tabs.example.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/InternalTabs',
+		title: 'custom/Atomic/InternalTabs',
 		component: InternalTabsExample,
 		tags: ['autodocs']
 	});

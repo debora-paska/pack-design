@@ -5,10 +5,8 @@
 	import { CardFooter } from '../../ui/card/index.js';
 	import { CardHeader } from '../../ui/card/index.js';
 	import { Progress } from '../../ui/progress/index.js';
-	import MappingStatusChip from '../mapping-status-chip/mapping-status-chip.svelte';
-	import MappingTypeChip from '../mapping-type-chip/mapping-type-chip.svelte';
 	import UniversalChip from '../universal-chip/universal-chip.svelte';
-	import type { MappingCardStatus, MappingCardType } from '../types';
+	import type { MappingCardStatus, MappingCardType, UniversalChipColor } from '../types';
 
 	let {
 		type = 'family',
@@ -40,14 +38,33 @@
 		onOpen?: () => void;
 	} = $props();
 
+	const typeChip: Record<MappingCardType, { label: string; color: UniversalChipColor }> = {
+		family: { label: 'Job family', color: 'info' },
+		single: { label: 'Single role', color: 'gray' },
+		tasks: { label: 'Task set', color: 'warning' }
+	};
+
+	const statusChip: Record<MappingCardStatus, { label: string; color: UniversalChipColor }> = {
+		done: { label: 'Done', color: 'success' },
+		queued: { label: 'In progress', color: 'warning' },
+		failed: { label: 'Failed', color: 'error' }
+	};
+
 	const clampedProgress = $derived(Math.max(0, Math.min(100, progress)));
+	const resolvedType = $derived(typeChip[type]);
+	const resolvedStatus = $derived(statusChip[status]);
 </script>
 
 <Card class="gap-3 py-4">
 	<CardHeader class="flex flex-row items-start justify-between gap-3">
-		<MappingTypeChip {type} />
+		<UniversalChip
+			color={resolvedType.color}
+			class="rounded-md px-2.5 py-1 text-[10.5px] font-bold tracking-wide uppercase"
+		>
+			{resolvedType.label}
+		</UniversalChip>
 		<div class="shrink-0 text-right">
-			<MappingStatusChip {status} />
+			<UniversalChip color={resolvedStatus.color}>{resolvedStatus.label}</UniversalChip>
 			<div class="mt-1 text-xs text-gray-8">{date}</div>
 		</div>
 	</CardHeader>

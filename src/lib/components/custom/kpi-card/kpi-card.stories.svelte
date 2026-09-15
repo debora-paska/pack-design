@@ -15,7 +15,7 @@
 		argTypes: {
 			color: {
 				control: { type: 'select' },
-				options: ['gray', 'primary', 'success', 'warning', 'error', 'info']
+				options: ['gray', 'primary', 'orange', 'success', 'warning', 'error', 'info']
 			}
 		}
 	});

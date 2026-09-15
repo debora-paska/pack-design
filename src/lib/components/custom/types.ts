@@ -49,7 +49,14 @@ export type CoverageBar = {
 	color?: CoverageBarColor;
 };
 
-export type UniversalChipColor = 'gray' | 'primary' | 'success' | 'warning' | 'error' | 'info';
+export type UniversalChipColor =
+	| 'gray'
+	| 'primary'
+	| 'orange'
+	| 'success'
+	| 'warning'
+	| 'error'
+	| 'info';
 
 export type MappingCardType = 'family' | 'single' | 'tasks';
 
@@ -88,11 +95,6 @@ export type KeyValueRow = {
 export type SkillConfidence = 'high' | 'medium';
 
 export type WizardStepState = 'idle' | 'active' | 'done';
-
-export type WizardStepItem = {
-	label: string;
-	sub: string;
-};
 
 export type ChipGroupOption = {
 	value: string;
