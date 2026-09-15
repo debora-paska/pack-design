@@ -29,3 +29,4 @@ git push
 Or set `PACK_UI_DIR` to the `packages/ui` path if you cloned this repo somewhere else.
 
 `pnpm sync` copies `src/`, `.storybook/`, and the Vite/Svelte/Storybook config. It does not overwrite `package.json`, this README, or `scripts/`.
+# pack-design
