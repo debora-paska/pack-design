@@ -1,0 +1,2 @@
+@keyframes ds-pulse{0%,100%{opacity:1}50%{opacity:.5}}
+@keyframes ds-spin{to{transform:rotate(360deg)}}
