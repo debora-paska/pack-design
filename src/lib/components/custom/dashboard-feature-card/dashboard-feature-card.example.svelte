@@ -23,5 +23,12 @@
 </script>
 
 <div class="w-[320px]">
-	<DashboardFeatureCard {title} {description} {callToAction} {visual} {status} {statusLabel} />
+	<DashboardFeatureCard
+		{title}
+		{description}
+		callToAction={status === 'comingSoon' ? undefined : callToAction}
+		{visual}
+		{status}
+		{statusLabel}
+	/>
 </div>

@@ -23,6 +23,9 @@
 			status: {
 				control: { type: 'select' },
 				options: ['enrolled', 'notActive', 'comingSoon']
+			},
+			callToAction: {
+				if: { arg: 'status', neq: 'comingSoon' }
 			}
 		}
 	});
@@ -33,7 +36,7 @@
 <Story
 	name="Not active"
 	args={{
-		callToAction: 'Unlock feature',
+		callToAction: 'Contact Sales',
 		status: 'notActive',
 		statusLabel: 'Not active',
 		description:
@@ -49,7 +52,8 @@
 			'A living map of the skills, tasks and roles behind every report — kept current as your organization evolves.',
 		visual: 'impackt',
 		status: 'comingSoon',
-		statusLabel: 'Coming soon'
+		statusLabel: 'Coming soon',
+		callToAction: undefined
 	}}
 />
 
@@ -61,6 +65,7 @@
 			"A talent-intelligence layer that maps your org and skill data to suggest each person's next move — career trajectory, gaps and successors — when they change roles, leave, or need development.",
 		visual: 'succession',
 		status: 'comingSoon',
-		statusLabel: 'Coming soon'
+		statusLabel: 'Coming soon',
+		callToAction: undefined
 	}}
 />

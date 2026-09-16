@@ -36,7 +36,7 @@
 		statusLabel ?? (isEnrolled ? 'Enrolled' : isNotActive ? 'Not active' : 'Coming soon')
 	);
 	const resolvedCallToAction = $derived(
-		callToAction ?? (isEnrolled ? `Open ${title}` : 'Unlock feature')
+		callToAction ?? (isEnrolled ? `Open ${title}` : 'Contact Sales')
 	);
 	const chipState = $derived(isEnrolled ? 'selected' : isComingSoon ? 'disabled' : 'default');
 </script>
@@ -48,8 +48,7 @@
 		class={cn(
 			'flex h-40 items-center justify-center rounded-lg',
 			isEnrolled && 'bg-primary-50',
-			isNotActive && 'bg-muted',
-			isComingSoon && 'bg-gray-3'
+			!isEnrolled && 'bg-muted'
 		)}
 	>
 		<div class={cn(isNotActive && 'opacity-80', isComingSoon && 'opacity-50')} aria-hidden="true">
