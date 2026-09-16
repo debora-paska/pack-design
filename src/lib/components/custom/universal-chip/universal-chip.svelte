@@ -7,7 +7,7 @@
 			color: {
 				gray: 'bg-gray-3 text-gray-11',
 				primary: 'bg-primary-500 text-white',
-				orange: 'bg-primary-100 text-primary-500',
+				orange: 'bg-primary-50 text-primary-500',
 				success: 'bg-success-50 text-success-200',
 				warning: 'bg-warning-50 text-warning-200',
 				error: 'bg-error-50 text-error-200',

@@ -21,7 +21,7 @@
 	} = $props();
 </script>
 
-<Card class="w-full min-w-0 flex-row items-center gap-3 py-3.5 [--card-spacing:--spacing(4)]">
+<Card class="w-full min-w-0 flex-row items-center gap-3 px-(--card-spacing) py-3.5 [--card-spacing:--spacing(4)]">
 	<div
 		class="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-500"
 	>

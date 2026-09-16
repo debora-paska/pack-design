@@ -5,9 +5,10 @@
 		base: 'inline-flex w-fit shrink-0 items-center justify-center rounded-md border px-2.5 py-1 text-sm font-medium',
 		variants: {
 			state: {
-				default: 'border-gray-5 bg-card text-foreground',
-				selected: 'border-primary-500 bg-primary-50 text-primary-500',
-				disabled: 'pointer-events-none cursor-not-allowed border-gray-5 bg-card text-muted-foreground opacity-50'
+				default: 'border-gray-5 bg-white text-foreground',
+				selected: 'border-primary-500 bg-white text-primary-500',
+				disabled:
+					'pointer-events-none cursor-not-allowed border-gray-5 bg-white text-muted-foreground opacity-50'
 			}
 		},
 		defaultVariants: {
