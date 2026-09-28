@@ -25,17 +25,30 @@
 		isDisabled?: boolean;
 		onSelect?: () => void;
 	} = $props();
+
+	function handleActivate() {
+		if (!isDisabled) onSelect?.();
+	}
 </script>
 
-<button
-	type="button"
-	disabled={isDisabled}
+<!-- div instead of button so RadioGroupItem (a button) is not nested -->
+<div
+	role="button"
+	tabindex={isDisabled ? -1 : 0}
+	aria-disabled={isDisabled}
+	aria-pressed={isSelected}
 	class={cn(
 		'flex min-h-[132px] w-full flex-col gap-3 rounded-lg border p-4 text-left transition-colors',
 		isSelected ? 'border-primary-500 bg-primary-50' : 'border-gray-5 bg-card',
-		isDisabled && 'pointer-events-none cursor-not-allowed opacity-50'
+		isDisabled ? 'pointer-events-none cursor-not-allowed opacity-50' : 'cursor-pointer'
 	)}
-	onclick={() => onSelect?.()}
+	onclick={handleActivate}
+	onkeydown={(event) => {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			handleActivate();
+		}
+	}}
 >
 	<div class="flex items-start justify-between gap-2.5">
 		<span
@@ -59,4 +72,4 @@
 	<div class="mt-auto border-t border-gray-5 pt-2.5 text-[11.5px] text-muted-foreground">
 		{footer}
 	</div>
-</button>
+</div>

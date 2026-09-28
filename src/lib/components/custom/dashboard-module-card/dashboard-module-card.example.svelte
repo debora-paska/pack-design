@@ -2,9 +2,9 @@
 	import DashboardModuleCard from './dashboard-module-card.svelte';
 	import type {
 		DashboardModuleStat,
-		DashboardModuleStatus,
-		DashboardModuleVisual
+		DashboardModuleStatus
 	} from './dashboard-module-card.svelte';
+	import type { DashboardModuleVisual } from './dashboard-module-visual.svelte';
 
 	let {
 		eyebrow = 'Skill Mapping',

@@ -1,9 +1,7 @@
 <script lang="ts">
 	import DashboardFeatureCard from './dashboard-feature-card.svelte';
-	import type {
-		DashboardFeatureStatus,
-		DashboardFeatureVisual
-	} from './dashboard-feature-card.svelte';
+	import type { DashboardFeatureStatus } from './dashboard-feature-card.svelte';
+	import type { DashboardFeatureVisual } from './dashboard-feature-visual.svelte';
 
 	let {
 		title = 'Pack AI',

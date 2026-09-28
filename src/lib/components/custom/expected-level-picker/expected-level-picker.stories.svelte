@@ -7,16 +7,16 @@
 		component: ExpectedLevelPicker,
 		tags: ['autodocs'],
 		args: {
-			value: undefined,
 			levels: [1, 2, 3, 4, 5]
 		},
 		argTypes: {
 			value: {
 				control: { type: 'select' },
-				options: [undefined, 1, 2, 3, 4, 5]
+				options: [1, 2, 3, 4, 5]
 			}
 		}
 	});
 </script>
 
 <Story name="Default" />
+<Story name="Level selected" args={{ value: 3 }} />
