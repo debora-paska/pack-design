@@ -3,7 +3,7 @@
 	import HrSidebarExample from './hr-sidebar.example.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/Sidebar',
+		title: 'custom/Dashboard/Sidebar',
 		component: HrSidebarExample,
 		tags: ['autodocs'],
 		args: {

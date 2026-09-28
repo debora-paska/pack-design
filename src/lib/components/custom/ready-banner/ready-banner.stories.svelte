@@ -1,13 +1,13 @@
 <script module>
 	import { defineMeta } from '@storybook/addon-svelte-csf';
-	import AriaNoticeExample from './aria-notice.example.svelte';
+	import ReadyBanner from './ready-banner.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/Assessment/AriaNotice',
-		component: AriaNoticeExample,
+		title: 'custom/Assessment/ReadyBanner',
+		component: ReadyBanner,
 		tags: ['autodocs'],
 		args: {
-			skillCount: 12
+			message: 'Questions are ready. The setup below is locked.'
 		}
 	});
 </script>

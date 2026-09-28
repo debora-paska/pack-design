@@ -3,7 +3,7 @@
 	import SidebarFooterExample from './sidebar-footer.example.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/SidebarFooter',
+		title: 'custom/Dashboard/SidebarFooter',
 		component: SidebarFooterExample,
 		tags: ['autodocs'],
 		args: {

@@ -20,6 +20,7 @@ const preview: Preview = {
 		options: {
 			storySort: {
 				order: [
+					'Colors',
 					'*',
 					'custom',
 					[
@@ -35,7 +36,7 @@ const preview: Preview = {
 							'UniversalTabs'
 						],
 						'Assessment',
-						['WizardStep', 'AssessmentTypeOption', 'ImportedSkillsPanel', 'AriaNotice']
+						['WizardStep', 'AssessmentTypeOption', 'ImportedSkillsPanel']
 					]
 				]
 			}

@@ -111,3 +111,41 @@ export type ImportedSkillItem = {
 	name: string;
 	status: SkillStatus;
 };
+
+export type SetupMethodIcon = 'artificial-intelligence' | 'template' | 'skills-list';
+
+export type SearchableDropdownOption = {
+	value: string;
+	label: string;
+	description?: string;
+	meta?: string;
+};
+
+export type SkillSourceKind = 'type-or-paste' | 'upload-file' | 'import-from-mapping';
+
+export type LanguageChecklistOption = {
+	value: string;
+	label: string;
+};
+
+export type ConfigurationPickerItem = {
+	value: string;
+	name: string;
+	meta: string;
+	company: string;
+};
+
+export type ConfigurationPickerScope = 'all' | 'company';
+
+export type SkillMapRole = {
+	id: string;
+	name: string;
+	meta: string;
+};
+
+export type SkillMapSkill = {
+	id: string;
+	name: string;
+	description: string;
+	expected: string;
+};

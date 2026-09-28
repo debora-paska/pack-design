@@ -3,7 +3,7 @@
 	import SidebarNavItemExample from './sidebar-nav-item.example.svelte';
 
 	const { Story } = defineMeta({
-		title: 'custom/HR Overview/SidebarNavItem',
+		title: 'custom/Dashboard/SidebarNavItem',
 		component: SidebarNavItemExample,
 		tags: ['autodocs'],
 		args: {

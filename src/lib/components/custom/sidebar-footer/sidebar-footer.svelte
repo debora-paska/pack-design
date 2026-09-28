@@ -1,14 +1,14 @@
 <script lang="ts">
 	import {
 		AdjustmentsHorizontalOutline,
-		ArrowRightFromBracketSolid,
-		BellOutline
+		ArrowRightFromBracketSolid
 	} from 'flowbite-svelte-icons';
 	import { Avatar } from '../../ui/avatar/index.js';
 	import { AvatarFallback } from '../../ui/avatar/index.js';
 	import { Button } from '../../ui/button/index.js';
 	import { Separator } from '../../ui/separator/index.js';
 	import { cn } from '@pack/ui/lib/utils.js';
+	import BellLinear from '../solar-icons/bell-linear.svelte';
 	import type { InteractionPreview, SidebarLanguage } from '../types';
 
 	let {
@@ -113,7 +113,7 @@
 		<span
 			class="inline-flex size-[30px] shrink-0 items-center justify-center text-muted-foreground"
 		>
-			<BellOutline class="size-4" />
+			<BellLinear class="size-4" />
 		</span>
 	</button>
 </div>

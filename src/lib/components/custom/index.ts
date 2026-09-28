@@ -28,6 +28,7 @@ export { default as QuickActionLink } from './quick-action-link/quick-action-lin
 export { default as SidebarNavItem } from './sidebar-nav-item/sidebar-nav-item.svelte';
 export { default as SidebarFooter } from './sidebar-footer/sidebar-footer.svelte';
 export { default as HrSidebar } from './hr-sidebar/hr-sidebar.svelte';
+export { default as PageTopbar } from './page-topbar/page-topbar.svelte';
 
 export { default as LevelBarRow } from './level-bar-row/level-bar-row.svelte';
 export { default as KpiCard } from './kpi-card/kpi-card.svelte';
@@ -44,6 +45,22 @@ export { default as ChipGroup } from './chip-group/chip-group.svelte';
 export { default as AssessmentTypeOption } from './assessment-type-option/assessment-type-option.svelte';
 export { default as ImportedSkillsPanel } from './imported-skills-panel/imported-skills-panel.svelte';
 export { default as AriaNotice } from './aria-notice/aria-notice.svelte';
+
+export { default as SetupMethodCard } from './setup-method-card/setup-method-card.svelte';
+export { default as ReadyBanner } from './ready-banner/ready-banner.svelte';
+export { default as InlineFieldError } from './inline-field-error/inline-field-error.svelte';
+export { default as SearchableDropdown } from './searchable-dropdown/searchable-dropdown.svelte';
+export { default as TemplateSummary } from './template-summary/template-summary.svelte';
+export { default as SkillSourceCard } from './skill-source-card/skill-source-card.svelte';
+export { default as ExpectedLevelPicker } from './expected-level-picker/expected-level-picker.svelte';
+export { default as SkillEditorRow } from './skill-editor-row/skill-editor-row.svelte';
+export { default as EmptySkillsPanel } from './empty-skills-panel/empty-skills-panel.svelte';
+export { default as LanguageChecklist } from './language-checklist/language-checklist.svelte';
+export { default as ScoringScale } from './scoring-scale/scoring-scale.svelte';
+export { default as ConfigurationPicker } from './configuration-picker/configuration-picker.svelte';
+export { default as RaterRoleChip } from './rater-role-chip/rater-role-chip.svelte';
+export { default as SkillMapImportDialog } from './skill-map-import-dialog/skill-map-import-dialog.svelte';
+export { default as GeneratingOverlay } from './generating-overlay/generating-overlay.svelte';
 
 export type {
 	SkillStatus,
@@ -69,5 +86,13 @@ export type {
 	WizardStepState,
 	ChipGroupOption,
 	AssessmentTypeChoice,
-	ImportedSkillItem
+	ImportedSkillItem,
+	SetupMethodIcon,
+	SearchableDropdownOption,
+	SkillSourceKind,
+	LanguageChecklistOption,
+	ConfigurationPickerItem,
+	ConfigurationPickerScope,
+	SkillMapRole,
+	SkillMapSkill
 } from './types';

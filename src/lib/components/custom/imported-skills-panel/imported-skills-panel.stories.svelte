@@ -17,7 +17,8 @@
 			count: 12,
 			mappingTitle: 'HR Business Partner',
 			skills,
-			isOpen: false
+			isOpen: false,
+			checkedNames: skills.map((skill) => skill.name)
 		}
 	});
 </script>

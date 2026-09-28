@@ -1,13 +1,11 @@
 <script lang="ts">
-	import {
-		ChartOutline,
-		ClipboardCheckOutline,
-		CogOutline,
-		GridOutline,
-		UsersGroupOutline
-	} from 'flowbite-svelte-icons';
 	import { AngleDownOutline } from 'flowbite-svelte-icons';
 	import { cn } from '@pack/ui/lib/utils.js';
+	import ChecklistMinimalisticLinear from '../solar-icons/checklist-minimalistic-linear.svelte';
+	import RoundGraphOutline from '../solar-icons/round-graph-outline.svelte';
+	import SettingsLinear from '../solar-icons/settings-linear.svelte';
+	import UsersGroupRoundedLinear from '../solar-icons/users-group-rounded-linear.svelte';
+	import Widget4Linear from '../solar-icons/widget-4-linear.svelte';
 	import type { InteractionPreview, SidebarModuleIcon, SidebarNavVariant } from '../types';
 
 	let {
@@ -55,15 +53,15 @@
 	)}
 >
 	{#if !isNested && icon === 'dashboard'}
-		<ChartOutline class="size-[17px] shrink-0" />
+		<Widget4Linear />
 	{:else if !isNested && icon === 'skill-mapping'}
-		<GridOutline class="size-[17px] shrink-0" />
+		<RoundGraphOutline />
 	{:else if !isNested && icon === 'assessment'}
-		<ClipboardCheckOutline class="size-[17px] shrink-0" />
+		<ChecklistMinimalisticLinear />
 	{:else if !isNested && icon === 'learning-and-development'}
-		<UsersGroupOutline class="size-[17px] shrink-0" />
+		<UsersGroupRoundedLinear />
 	{:else if !isNested && icon === 'general'}
-		<CogOutline class="size-[17px] shrink-0" />
+		<SettingsLinear />
 	{/if}
 	<span class="min-w-0 flex-1 truncate">{label}</span>
 	{#if isGroup}
