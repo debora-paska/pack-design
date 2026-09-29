@@ -23,7 +23,8 @@
 		success: 'bg-success-50',
 		warning: 'bg-warning-50',
 		error: 'bg-error-50',
-		info: 'bg-info-50'
+		info: 'bg-info-50',
+		white: 'bg-white'
 	};
 
 	const titleClass: Record<UniversalChipColor, string> = {
@@ -33,7 +34,8 @@
 		success: 'text-success-100',
 		warning: 'text-warning-100',
 		error: 'text-error-100',
-		info: 'text-info-100'
+		info: 'text-info-100',
+		white: 'text-foreground'
 	};
 </script>
 

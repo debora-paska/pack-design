@@ -56,7 +56,8 @@ export type UniversalChipColor =
 	| 'success'
 	| 'warning'
 	| 'error'
-	| 'info';
+	| 'info'
+	| 'white';
 
 export type MappingCardType = 'family' | 'single' | 'tasks';
 

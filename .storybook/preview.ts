@@ -32,6 +32,7 @@ const preview: Preview = {
 							'InternalTab',
 							'InternalTabs',
 							'UniversalChip',
+							'OwnerGlyph',
 							'UniversalTab',
 							'UniversalTabs'
 						],

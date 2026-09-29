@@ -5,13 +5,14 @@
 		base: 'inline-flex w-fit shrink-0 items-center rounded-md px-2 py-0.5 text-xs font-medium',
 		variants: {
 			color: {
-				gray: 'bg-gray-3 text-gray-11',
+				gray: 'bg-gray-3 text-gray-12',
 				primary: 'bg-primary-500 text-white',
 				orange: 'bg-primary-50 text-primary-500',
-				success: 'bg-success-50 text-success-200',
-				warning: 'bg-warning-50 text-warning-200',
+				success: 'bg-success-50 text-success-400',
+				warning: 'bg-warning-50 text-warning-400',
 				error: 'bg-error-50 text-error-200',
-				info: 'bg-info-50 text-info-200'
+				info: 'bg-info-50 text-info-200',
+				white: 'border border-gray-4 bg-white text-foreground'
 			}
 		},
 		defaultVariants: {

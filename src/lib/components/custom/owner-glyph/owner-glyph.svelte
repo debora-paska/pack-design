@@ -14,6 +14,7 @@
 
 <script lang="ts">
 	import { cn } from '@pack/ui/lib/utils.js';
+	import UniversalChip from '../universal-chip/universal-chip.svelte';
 
 	let { owner }: { owner: SkillOwner } = $props();
 
@@ -21,14 +22,14 @@
 	const glyphClass = $derived(
 		{
 			human: 'text-success-400',
-			hybrid: 'text-primary',
+			hybrid: 'text-primary-500',
 			ai: 'text-info-300',
 			robot: 'text-muted-foreground'
 		}[owner]
 	);
 </script>
 
-<span class="inline-flex items-center gap-1.5 text-foreground">
-	<span class={cn('text-[11px]', glyphClass)}>{meta.glyph}</span>
-	<span class="text-xs">{meta.short}</span>
-</span>
+<UniversalChip color="white" class="gap-1">
+	<span class={cn('text-[11px] leading-none', glyphClass)}>{meta.glyph}</span>
+	{meta.short}
+</UniversalChip>
