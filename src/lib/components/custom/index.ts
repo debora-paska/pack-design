@@ -96,3 +96,6 @@ export type {
 	SkillMapRole,
 	SkillMapSkill
 } from './types';
+
+export { default as FilterPills } from './filter-pills/filter-pills.svelte';
+export type { FilterPillOption, FilterPillTone } from './filter-pills/filter-pills.svelte';
