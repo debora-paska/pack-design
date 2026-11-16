@@ -45,11 +45,16 @@
 	class={cn(
 		'flex w-full items-center gap-2.5 rounded-md text-left outline-none focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:ring-offset-2',
 		isNested ? 'mt-0.5 py-1.5 pr-2.5 pl-[47px] text-[12.5px]' : 'px-2.5 py-2 text-[13.5px]',
-		isGroup ? 'font-medium text-sidebar-foreground' : 'text-gray-11',
-		!isDisabledState && !isActiveState && 'hover:bg-gray-2',
+		// Menu entries (leaf, group) are medium at rest; submenu entries regular (2026-11-16).
+		isGroup ? 'font-medium text-sidebar-foreground' : isNested ? 'text-gray-11' : 'font-medium text-gray-11',
+		!isDisabledState && !(isActiveState && !isGroup) && 'hover:bg-gray-2',
 		isHoverPreview && !isDisabledState && !isActiveState && 'bg-gray-2',
-		// Active (2026-11-16): primary-50 fill, gray-13 icon and text (17.7:1).
-		isActiveState && 'bg-primary-50 font-medium text-gray-13',
+		// The current page: a top-level entry is semibold, a submenu entry medium; a group holding it
+		// is semibold, with the fill only while collapsed. Fill primary-50, gray-13 icon and text (17.7:1).
+		isActiveState && !isGroup && 'bg-primary-50 text-gray-13',
+		isActiveState && !isGroup && (isNested ? 'font-medium' : 'font-semibold'),
+		isActiveState && isGroup && 'font-semibold text-gray-13',
+		isActiveState && isGroup && !isExpanded && 'bg-primary-50',
 		// Disabled: a colour, not opacity; not usable, so exempt from contrast.
 		isDisabledState && 'pointer-events-none text-gray-9'
 	)}

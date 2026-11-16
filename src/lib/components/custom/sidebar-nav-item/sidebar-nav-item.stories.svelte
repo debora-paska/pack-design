@@ -28,6 +28,15 @@
 	name="Group Collapsed"
 	args={{ variant: 'group', label: 'Skill Mapping', icon: 'skill-mapping', isExpanded: false }}
 />
+<!-- The current page is inside the group: the header turns semibold; collapsed, it also takes the fill. -->
+<Story
+	name="Group Active"
+	args={{ variant: 'group', label: 'Skill Mapping', icon: 'skill-mapping', isExpanded: true, isActive: true }}
+/>
+<Story
+	name="Group Active Collapsed"
+	args={{ variant: 'group', label: 'Skill Mapping', icon: 'skill-mapping', isExpanded: false, isActive: true }}
+/>
 
 <Story name="Nested Default" args={{ variant: 'nested', label: 'Overview' }} />
 <Story
