@@ -11,8 +11,9 @@
 	let {
 		value = 'all',
 		label = 'Show',
+		hasDot = false,
 		options = COUNTS
-	}: { value?: string; label?: string; options?: FilterPillOption[] } = $props();
+	}: { value?: string; label?: string; hasDot?: boolean; options?: FilterPillOption[] } = $props();
 </script>
 
-<FilterPills {label} {value} {options} onValueChange={(next) => (value = next)} />
+<FilterPills {label} {value} {hasDot} {options} onValueChange={(next) => (value = next)} />
