@@ -13,14 +13,14 @@
 	bind:ref
 	data-slot="radio-group-item"
 	class={cn(
-		'peer relative flex size-4 shrink-0 items-center justify-center rounded-full border border-input bg-white shadow-xs outline-none transition-shadow after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 data-checked:border-primary-500',
+		'peer relative flex size-4 shrink-0 items-center justify-center rounded-full border border-gray-9 bg-white shadow-xs outline-none transition-shadow after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 data-checked:border-primary-500',
 		className
 	)}
 	{...restProps}
 >
 	{#snippet children({ checked })}
 		{#if checked}
-			<span class="size-2 rounded-full bg-primary-500"></span>
+			<span class="size-2 rounded-full bg-gray-13"></span>
 		{/if}
 	{/snippet}
 </RadioGroupPrimitive.Item>
