@@ -98,4 +98,6 @@ export type {
 } from './types';
 
 export { default as FilterPills } from './filter-pills/filter-pills.svelte';
-export type { FilterPillOption, FilterPillTone } from './filter-pills/filter-pills.svelte';
+export type { FilterPillOption } from './filter-pills/filter-pills.svelte';
+
+export { default as Timeline } from './timeline/timeline.svelte';

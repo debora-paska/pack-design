@@ -2,18 +2,17 @@
 	import FilterPills, { type FilterPillOption } from './filter-pills.svelte';
 
 	const COUNTS: FilterPillOption[] = [
-		{ value: 'all', label: 'All · 15', tone: 'neutral' },
-		{ value: 'suggested', label: 'Suggestions · 2', tone: 'info' },
-		{ value: 'commented', label: 'Comments · 2', tone: 'neutral' },
-		{ value: 'approved', label: 'Accepted · 4', tone: 'positive' }
+		{ value: 'all', label: 'All · 15' },
+		{ value: 'suggested', label: 'Suggestions · 2' },
+		{ value: 'commented', label: 'Comments · 2' },
+		{ value: 'approved', label: 'Accepted · 4' }
 	];
 
 	let {
 		value = 'all',
 		label = 'Show',
-		hasDot = false,
 		options = COUNTS
-	}: { value?: string; label?: string; hasDot?: boolean; options?: FilterPillOption[] } = $props();
+	}: { value?: string; label?: string; options?: FilterPillOption[] } = $props();
 </script>
 
-<FilterPills {label} {value} {hasDot} {options} onValueChange={(next) => (value = next)} />
+<FilterPills {label} {value} {options} onValueChange={(next) => (value = next)} />

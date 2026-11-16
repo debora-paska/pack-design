@@ -7,8 +7,7 @@
 		title: 'custom/Atomic/FilterPills',
 		component: FilterPillsExample,
 		tags: ['autodocs'],
-		argTypes: { hasDot: { control: 'boolean' } },
-		args: { value: 'all', hasDot: true }
+		args: { value: 'all' }
 	});
 
 	/**
@@ -34,7 +33,6 @@
 	}
 </script>
 
-<!-- hasDot: a dot before each label, in the option's tone (the Badge text colours). -->
 <Story name="Default" play={checkKeyboard} />
 <Story name="Suggestions selected" args={{ value: 'suggested' }} />
 <!-- One pill per variant: default, active (selected), disabled. -->
@@ -44,32 +42,15 @@
 		label: 'Status',
 		value: 'active',
 		options: [
-			{ value: 'default', label: 'Default', tone: 'neutral' },
-			{ value: 'active', label: 'Active', tone: 'info' },
-			{ value: 'disabled', label: 'Disabled', tone: 'positive', isDisabled: true }
-		]
-	}}
-/>
-<!-- The dot colours a designer can pick: the text colour of the Badge variant of the same name. -->
-<Story
-	name="Dot colours"
-	args={{
-		label: 'Tone',
-		value: 'neutral',
-		options: [
-			{ value: 'neutral', label: 'Neutral', tone: 'neutral' },
-			{ value: 'info', label: 'Info', tone: 'info' },
-			{ value: 'destructive', label: 'Destructive', tone: 'destructive' },
-			{ value: 'positive', label: 'Positive', tone: 'positive' },
-			{ value: 'brand', label: 'Brand', tone: 'brand' },
-			{ value: 'indigo', label: 'Indigo', tone: 'indigo' }
+			{ value: 'default', label: 'Default' },
+			{ value: 'active', label: 'Active' },
+			{ value: 'disabled', label: 'Disabled', isDisabled: true }
 		]
 	}}
 />
 <Story
 	name="Plain choices"
 	args={{
-		hasDot: false,
 		label: 'Scenario horizon',
 		value: '3y',
 		options: [
@@ -83,7 +64,6 @@
 <Story
 	name="With hints"
 	args={{
-		hasDot: false,
 		label: 'Company size',
 		value: '250_1000',
 		options: [
