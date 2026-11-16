@@ -43,13 +43,15 @@
 		if (!isDisabledState) onSelect?.();
 	}}
 	class={cn(
-		'flex w-full items-center gap-2.5 rounded-md text-left',
+		'flex w-full items-center gap-2.5 rounded-md text-left outline-none focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:ring-offset-2',
 		isNested ? 'mt-0.5 py-1.5 pr-2.5 pl-[47px] text-[12.5px]' : 'px-2.5 py-2 text-[13.5px]',
 		isGroup ? 'font-medium text-sidebar-foreground' : 'text-gray-11',
-		!isDisabledState && 'hover:bg-gray-2',
+		!isDisabledState && !isActiveState && 'hover:bg-gray-2',
 		isHoverPreview && !isDisabledState && !isActiveState && 'bg-gray-2',
-		isActiveState && 'bg-sidebar-accent font-medium text-primary-500',
-		isDisabledState && 'pointer-events-none opacity-45'
+		// Active (2026-11-16): primary-50 fill, gray-12 icon and text (10:1).
+		isActiveState && 'bg-primary-50 font-medium text-gray-12',
+		// Disabled: a colour, not opacity; not usable, so exempt from contrast.
+		isDisabledState && 'pointer-events-none text-gray-9'
 	)}
 >
 	{#if !isNested && icon === 'dashboard'}

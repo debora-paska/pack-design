@@ -53,7 +53,7 @@
 			data-slot="select-content"
 			class="bg-popover text-popover-foreground absolute top-[42px] right-0 left-0 z-50 overflow-hidden rounded-md shadow-md ring-1 ring-foreground/10"
 		>
-			<div class="flex items-center gap-2 border-b border-border px-2.5 py-2">
+			<div class="flex items-center gap-2 border-b border-border bg-gray-1 px-2.5 py-2">
 				<SearchOutline class="size-3.5 shrink-0 text-muted-foreground" />
 				<Input
 					class="h-8 border-0 bg-transparent p-0 shadow-none focus-visible:ring-0"

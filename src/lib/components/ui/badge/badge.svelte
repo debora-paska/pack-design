@@ -2,20 +2,36 @@
 	import { type VariantProps, tv } from 'tailwind-variants';
 
 	export const badgeVariants = tv({
-		base: 'h-5 gap-1 rounded-4xl border border-transparent px-2 py-0.5 text-xs font-medium transition-all has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&>svg]:size-3! group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap transition-colors focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&>svg]:pointer-events-none',
+		// The "Tags and pills" shape (2026-11-16); `isTableChip` squares it for table cells.
+		base: 'h-auto gap-1 rounded-4xl border border-transparent px-[9px] py-[3px] text-xs font-medium transition-all has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&>svg]:size-3! group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:ring-offset-2 [&>svg]:pointer-events-none',
 		variants: {
 			variant: {
-				default: 'bg-primary-500 text-white [a]:hover:bg-primary-500',
-				secondary: 'bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80',
-				destructive:
-					'bg-destructive/10 text-destructive focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:focus-visible:ring-destructive/40 [a]:hover:bg-destructive/20',
+				/** Dark grey, light text (10.9:1). */
+				default: 'bg-gray-12 text-gray-1',
+				/** Types, categories, inactive statuses (5.2:1). */
+				neutral: 'bg-gray-3 text-gray-11',
+				/** Open-ended, under way, informative (8.5:1). */
+				info: 'bg-info-50 text-info-500',
+				/** An error, a limit exceeded (7.2:1). */
+				destructive: 'bg-destructive/10 text-error-500 [a]:hover:bg-destructive/20',
+				/** Done, accepted, within limits (5.5:1). */
+				positive: 'bg-success-50 text-success-500',
+				/** The brand colour: something new or generating (5:1). */
+				brand: 'bg-primary-50 text-primary-700',
+				/** Leo (the AI), skills (7.2:1). */
+				indigo: 'bg-indigo-50 text-indigo-400',
 				outline: 'border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground',
-				ghost: 'hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50',
-				link: 'text-primary underline-offset-4 hover:underline'
+				ghost: 'hover:bg-muted hover:text-muted-foreground',
+				link: 'text-primary-700 underline-offset-4 hover:underline'
+			},
+			isTableChip: {
+				true: 'gap-[5px] rounded-sm px-2 py-0.5',
+				false: ''
 			}
 		},
 		defaultVariants: {
-			variant: 'default'
+			variant: 'default',
+			isTableChip: false
 		}
 	});
 
@@ -31,10 +47,13 @@
 		href,
 		class: className,
 		variant = 'default',
+		isTableChip = false,
 		children,
 		...restProps
 	}: WithElementRef<HTMLAnchorAttributes> & {
 		variant?: BadgeVariant;
+		/** Square-cornered chip for table cells. */
+		isTableChip?: boolean;
 	} = $props();
 </script>
 
@@ -43,7 +62,7 @@
 	bind:this={ref}
 	data-slot="badge"
 	{href}
-	class={cn(badgeVariants({ variant }), className)}
+	class={cn(badgeVariants({ variant, isTableChip }), className)}
 	{...restProps}
 >
 	{@render children?.()}

@@ -26,8 +26,12 @@
 	const buttonStates = ['rest', 'hover', 'active', 'disabled'] as const;
 	const badgeVariants: BadgeVariant[] = [
 		'default',
-		'secondary',
+		'neutral',
+		'info',
 		'destructive',
+		'positive',
+		'brand',
+		'indigo',
 		'outline',
 		'ghost',
 		'link'

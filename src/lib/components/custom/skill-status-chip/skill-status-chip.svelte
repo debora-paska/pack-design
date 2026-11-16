@@ -3,7 +3,7 @@
 	import type { SkillStatus } from '../types';
 
 	export const SKILL_STATUS_META: Record<SkillStatus, { label: string; variant: BadgeVariant }> = {
-		growing: { label: 'Growing', variant: 'secondary' },
+		growing: { label: 'Growing', variant: 'neutral' },
 		stable: { label: 'Stable', variant: 'outline' },
 		embedded: { label: 'Embedded', variant: 'outline' },
 		new: { label: 'New', variant: 'default' },
