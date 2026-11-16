@@ -48,8 +48,8 @@
 		isGroup ? 'font-medium text-sidebar-foreground' : 'text-gray-11',
 		!isDisabledState && !isActiveState && 'hover:bg-gray-2',
 		isHoverPreview && !isDisabledState && !isActiveState && 'bg-gray-2',
-		// Active (2026-11-16): primary-50 fill, gray-12 icon and text (10:1).
-		isActiveState && 'bg-primary-50 font-medium text-gray-12',
+		// Active (2026-11-16): primary-50 fill, gray-13 icon and text (16:1).
+		isActiveState && 'bg-primary-50 font-medium text-gray-13',
 		// Disabled: a colour, not opacity; not usable, so exempt from contrast.
 		isDisabledState && 'pointer-events-none text-gray-9'
 	)}

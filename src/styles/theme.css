@@ -55,6 +55,8 @@
 	--color-gray-10: #838383;
 	--color-gray-11: #646464;
 	--color-gray-12: #3b3b3b;
+	/* Near black, one step past Figma's 12 (2026-11-16): the active sidebar item, checked checkboxes. */
+	--color-gray-13: #171717;
 
 	/* black / white overlays */
 	--color-black-1: #0000000c;

@@ -39,7 +39,7 @@
 		>
 			<div class="flex items-center gap-2.5">
 				<div
-					class="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-5 bg-gray-1 px-2.5"
+					class="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-9 bg-gray-1 px-2.5"
 				>
 					<SearchOutline class="size-3.5 shrink-0 text-muted-foreground" />
 					<Input
