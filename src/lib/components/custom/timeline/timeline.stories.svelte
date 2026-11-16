@@ -19,7 +19,11 @@
 	const { Story } = defineMeta({
 		title: 'custom/Atomic/Timeline',
 		component: Timeline,
-		tags: ['autodocs']
+		tags: ['autodocs'],
+		// A replica of production's timeline, kept identical on purpose (Paska, 2026-11-16): its
+		// time (`gray-400`, 2.6:1) fails WCAG 1.4.3. `todo` until the design changes it
+		// (proposal: `muted-foreground`, 5.7:1).
+		parameters: { a11y: { test: 'todo' } }
 	});
 </script>
 
@@ -32,14 +36,14 @@
 
 <Story name="Default">
 	{#snippet template()}
-		<div class="max-w-2xl p-4"><Timeline label="Events history" {items} item={card} /></div>
+		<div class="max-w-2xl p-4"><Timeline {items} item={card} /></div>
 	{/snippet}
 </Story>
 
 <Story name="With more to load">
 	{#snippet template()}
 		<div class="max-w-2xl p-4">
-			<Timeline label="Events history" {items} item={card} hasMore>
+			<Timeline {items} item={card} hasMore>
 				{#snippet loadMore()}
 					<Button variant="outline" size="sm">Load more</Button>
 				{/snippet}
