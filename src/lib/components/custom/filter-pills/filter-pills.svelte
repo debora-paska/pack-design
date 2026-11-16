@@ -22,7 +22,7 @@
 	export type FilterPillVariant = 'default' | 'active' | 'disabled';
 
 	export const filterPillVariants = tv({
-		base: 'inline-flex h-[30px] shrink-0 items-center gap-1.5 rounded-full border px-[11px] text-xs whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:ring-offset-2',
+		base: 'inline-flex h-[30px] shrink-0 items-center gap-1.5 rounded-full border px-[11px] text-xs whitespace-nowrap outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2',
 		variants: {
 			variant: {
 				default: 'border-gray-5 bg-white font-medium text-gray-11',

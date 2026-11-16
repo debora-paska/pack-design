@@ -40,7 +40,7 @@
 
 <div
 	class={cn(
-		'flex h-10 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-9 bg-gray-1 pl-3 focus-within:ring-2 focus-within:ring-primary-700 focus-within:ring-offset-2 has-disabled:cursor-not-allowed has-disabled:bg-gray-3',
+		'flex h-10 w-full min-w-0 items-center gap-2 rounded-lg border border-gray-9 bg-gray-1 pl-3 focus-within:ring-2 focus-within:ring-primary-600 focus-within:ring-offset-2 has-disabled:cursor-not-allowed has-disabled:bg-gray-3',
 		hasText ? 'pr-2' : 'pr-3',
 		className
 	)}
@@ -58,7 +58,7 @@
 		<button
 			type="button"
 			aria-label={clearLabel}
-			class="flex size-6 shrink-0 items-center justify-center rounded-md text-gray-11 outline-none hover:bg-gray-3 hover:text-gray-12 focus-visible:ring-2 focus-visible:ring-primary-700"
+			class="flex size-6 shrink-0 items-center justify-center rounded-md text-gray-11 outline-none hover:bg-gray-3 hover:text-gray-12 focus-visible:ring-2 focus-visible:ring-primary-600"
 			onclick={handleClear}
 		>
 			<XIcon class="size-4" aria-hidden="true" />

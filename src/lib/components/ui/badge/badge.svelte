@@ -3,7 +3,7 @@
 
 	export const badgeVariants = tv({
 		// The "Tags and pills" shape (2026-11-16); `isTableChip` squares it for table cells.
-		base: 'h-auto gap-1 rounded-4xl border border-transparent px-[9px] py-[3px] text-xs font-medium transition-all has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&>svg]:size-3! group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary-700 focus-visible:ring-offset-2 [&>svg]:pointer-events-none',
+		base: 'h-auto gap-1 rounded-4xl border border-transparent px-[9px] py-[3px] text-xs font-medium transition-all has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&>svg]:size-3! group/badge inline-flex w-fit shrink-0 items-center justify-center overflow-hidden whitespace-nowrap transition-colors outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 [&>svg]:pointer-events-none',
 		variants: {
 			variant: {
 				/** Dark grey, light text (10.9:1). */

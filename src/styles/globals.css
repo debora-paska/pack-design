@@ -263,7 +263,7 @@
 	--info-disabled: var(--info-50);
 	--border: var(--gray-4);
 	--input: var(--gray-4);
-	--ring: var(--primary-500);
+	--ring: var(--primary-600);
 	--chart-1: var(--primary-500);
 	--chart-2: var(--info-300);
 	--chart-3: var(--success-300);
