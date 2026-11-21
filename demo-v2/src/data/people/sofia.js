@@ -1,0 +1,20 @@
+export const person = {
+  "id": "sofia",
+  "name": "Sofia Russo",
+  "initials": "SR",
+  "mappingId": "customer-ops-specialist",
+  "role": "Customer Operations Specialist",
+  "unit": "Customer Operations",
+  "project": "Customer Ops intake — Mar 2026",
+  "status": "In progress",
+  "completed": "—",
+  "coverage": null,
+  "avgLevel": null,
+  "onTarget": "—",
+  "criticalGaps": null,
+  "severity": "—",
+  "raters": "4 of 5 responses in",
+  "note": "Self-assessment submitted · peers pending",
+  "strengths": [],
+  "gaps": []
+};

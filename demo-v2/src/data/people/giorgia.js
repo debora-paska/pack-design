@@ -1,0 +1,20 @@
+export const person = {
+  "id": "giorgia",
+  "name": "Giorgia Ferri",
+  "initials": "GF",
+  "mappingId": "pm",
+  "role": "Product Manager",
+  "unit": "Product",
+  "project": "Product craft baseline 2026",
+  "status": "Not started",
+  "completed": "—",
+  "coverage": null,
+  "avgLevel": null,
+  "onTarget": "—",
+  "criticalGaps": null,
+  "severity": "—",
+  "raters": "0 of 6 responses in",
+  "note": "Invite not opened",
+  "strengths": [],
+  "gaps": []
+};

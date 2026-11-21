@@ -1,0 +1,21 @@
+import { mapping as hrbp } from './hrbp.js';
+import { mapping as talent } from './talent.js';
+import { mapping as financialAnalyst } from './financial-analyst.js';
+import { mapping as customerOps } from './customer-ops-specialist.js';
+import { mapping as pm } from './pm.js';
+import { person as sara } from './people/sara.js';
+import { person as marco } from './people/marco.js';
+import { person as elena } from './people/elena.js';
+import { person as davide } from './people/davide.js';
+import { person as luca } from './people/luca.js';
+import { person as chiara } from './people/chiara.js';
+import { person as paolo } from './people/paolo.js';
+import { person as sofia } from './people/sofia.js';
+import { person as andrea } from './people/andrea.js';
+import { person as giorgia } from './people/giorgia.js';
+
+export const mappings = [hrbp, talent, financialAnalyst, customerOps, pm];
+export const people = [sara, marco, elena, davide, luca, chiara, paolo, sofia, andrea, giorgia];
+export const projects = Array.from(new Set(people.map((p) => p.project)));
+export const statuses = ['Report ready', 'In progress', 'Awaiting responses', 'Not started'];
+export const severities = ['High', 'Medium', 'Low'];

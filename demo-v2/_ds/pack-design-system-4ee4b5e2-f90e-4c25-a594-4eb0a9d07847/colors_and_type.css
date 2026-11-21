@@ -1,0 +1,252 @@
+/* ============================================================
+   PACK — Colors & Type Foundations
+   Single source of truth for tokens and font faces.
+   Source: pack/packages/web/tailwind.config.cjs (palette),
+           uploads/ (Montserrat — Light/Medium + Italic).
+   ============================================================ */
+
+/* -----------------------------
+   1.  FONT FACES — Montserrat
+   -----------------------------
+   Pack only ships Light (300) and Medium (500) weights.
+   Use Light for body, Medium for emphasis & UI labels.
+   Anything heavier than Medium is OFF-BRAND. Do not synthesize bold. */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/Montserrat-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/Montserrat-LightItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Montserrat-MediumItalic.ttf') format('truetype');
+}
+
+
+:root {
+  /* -----------------------------
+     2.  COLOR TOKENS
+     -----------------------------
+     Mirrors the production Tailwind config exactly. Always reference
+     these via var(--…) — never re-declare hex values inline. */
+
+  /* Primary — warm orange. The brand's signature. Use for primary CTAs,
+     active nav, focus rings, and key accents. Default action shade is 600. */
+  --color-primary-50:  #FFE8D9;
+  --color-primary-100: #FFD0B3;
+  --color-primary-200: #FFB485;
+  --color-primary-300: #FFA770;
+  --color-primary-400: #FF9A5C;
+  --color-primary-500: #FF8B45;  /* brand mark fill */
+  --color-primary-600: #FF8133;  /* default CTA */
+  --color-primary-700: #FF751F;  /* CTA hover */
+  --color-primary-800: #FF680A;
+  --color-primary-900: #F55E00;
+
+  /* Secondary — soft sky. Subtle informational chips, calendar slots,
+     decorative blocks. Pairs gently with primary. */
+  --color-secondary-100: #EDF7ED;
+  --color-secondary-200: #DAEFFB;
+  --color-secondary-300: #C8E7F9;
+  --color-secondary-400: #B6DFF7;
+  --color-secondary-500: #A4D7F5;
+  --color-secondary-600: #91CFF3;
+  --color-secondary-700: #7EC7F1;
+  --color-secondary-800: #7EC7F1;
+  --color-secondary-900: #5AB7ED;
+
+  /* Tertiary — saturated blue. Tags, link emphasis, data viz contrast. */
+  --color-tertiary-100: #0AADFF;
+  --color-tertiary-200: #00A3F5;
+  --color-tertiary-300: #007AB8;
+  --color-tertiary-400: #0088CC;
+  --color-tertiary-500: #0074AF;  /* default tag fill */
+  --color-tertiary-900: #004466;
+
+  /* Neutral foundations */
+  --color-ink:        #101410;  /* neutralB — text on light, deep canvas */
+  --color-paper:      #F9FAFC;  /* neutralW — app surface, light text */
+  --color-white:      #FFFFFF;
+
+  /* Gray scale — UI structure (borders, dividers, muted text). */
+  --color-gray-100: #EEEEF0;
+  --color-gray-200: #C9C8CA;
+  --color-gray-300: #A7A5A8;
+  --color-gray-400: #878588;
+  --color-gray-500: #6A696C;
+  --color-gray-600: #504F52;
+  --color-gray-700: #38393C;
+  --color-gray-900: #101314;
+
+  /* Status — positive / negative.
+     Use 600–800 for foregrounds, 100–200 for soft backgrounds. */
+  --color-positive-100: #DFFFC2;
+  --color-positive-500: #B5FF70;
+  --color-positive-600: #76F500;
+  --color-positive-800: #63CC00;
+  --color-positive-900: #59B800;
+
+  --color-negative-100: #FF9E99;
+  --color-negative-500: #FF4E45;
+  --color-negative-600: #FF3D33;
+  --color-negative-800: #FF160A;
+  --color-negative-900: #F50C00;
+
+  /* -----------------------------
+     3.  TYPE TOKENS
+     ----------------------------- */
+  --font-sans: 'Montserrat', ui-sans-serif, system-ui, -apple-system,
+               'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Weights — only TWO are licensed/installed. */
+  --weight-light:  300;   /* body copy, descriptive text */
+  --weight-medium: 500;   /* headings, buttons, labels, emphasis */
+
+  /* Type scale — modular, suited to a data-dense web app.
+     Body is 14px (sm:text-sm convention in Tailwind config). */
+  --text-xs:   12px;   /* metadata, captions, tag text */
+  --text-sm:   14px;   /* default body, form inputs */
+  --text-base: 16px;   /* secondary body */
+  --text-lg:   18px;   /* card titles */
+  --text-xl:   20px;   /* section headings */
+  --text-2xl:  24px;   /* page titles */
+  --text-3xl:  30px;   /* dashboard heroes (login screen) */
+  --text-4xl:  36px;
+  --text-5xl:  48px;   /* marketing / empty-state hero */
+
+  --leading-tight:  1.2;
+  --leading-snug:   1.35;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:  0.04em;
+
+  /* -----------------------------
+     4.  SPACING & RADIUS
+     ----------------------------- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-sm:   4px;   /* tags, pills */
+  --radius-md:   6px;   /* inputs, default buttons */
+  --radius-lg:   8px;   /* cards */
+  --radius-xl:  12px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(16, 19, 20, 0.05);
+  --shadow:    0 1px 3px 0 rgba(16, 19, 20, 0.10), 0 1px 2px -1px rgba(16, 19, 20, 0.10);
+  --shadow-lg: 0 10px 15px -3px rgba(16, 19, 20, 0.10), 0 4px 6px -4px rgba(16, 19, 20, 0.10);
+
+  /* Focus ring — primary-500 at 35% with offset, matches Field.svelte. */
+  --ring-focus: 0 0 0 2px var(--color-white), 0 0 0 4px var(--color-primary-500);
+}
+
+
+/* -----------------------------
+   5.  TYPOGRAPHY UTILITY CLASSES
+   -----------------------------
+   Optional helpers for HTML mockups that don't run Tailwind. */
+
+.t-display {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-ink);
+}
+
+.t-h1 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-2xl);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+}
+
+.t-h2 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+}
+
+.t-h3 {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+}
+
+.t-body {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size:   var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-gray-700);
+}
+
+.t-body-lg {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size:   var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-700);
+}
+
+.t-label {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+}
+
+.t-meta {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-light);
+  font-size:   var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--color-gray-500);
+}
+
+.t-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size:   var(--text-xs);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+}
